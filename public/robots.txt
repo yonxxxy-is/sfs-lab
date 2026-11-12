@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sionfelix-portfolio.vercel.app/sitemap.xml
+Sitemap: https://portofolio-sfs.vercel.app/sitemap.xml
