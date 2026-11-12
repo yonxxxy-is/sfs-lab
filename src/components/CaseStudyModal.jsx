@@ -138,6 +138,7 @@ function Dialog({ project, onClose }) {
               width="1200"
               height="480"
               loading="lazy"
+              decoding="async"
               className="mt-5 w-full rounded-lg border border-slate-200 bg-white object-contain dark:border-slate-800"
             />
           )}

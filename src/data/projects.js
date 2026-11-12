@@ -117,7 +117,7 @@ export const projects = [
       "Delivered as a team of four",
     ],
     tags: ["Tableau", "Data Visualization", "Exploratory Data Analysis", "SDG 7"],
-    image: "/gallery/tableau-analytics.png",
+    image: "/gallery/tableau-analytics.webp",
     imageAlt:
       "Tableau dashboard with a world map of renewable energy share, a top 10 ranking of countries, a trend line of fossil versus renewable share, and a GDP versus renewable share scatter plot.",
     links: [

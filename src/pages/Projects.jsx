@@ -1,11 +1,12 @@
-import { useCallback, useMemo, useState } from "react";
+import { lazy, Suspense, useCallback, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { projects } from "../data/projects";
 import ProjectCard from "../components/ProjectCard";
-import CaseStudyModal from "../components/CaseStudyModal";
 import { heading, meta, muted } from "../components/tokens";
 import { spring } from "../lib/motion";
 import usePageTitle from "../hooks/usePageTitle";
+
+const CaseStudyModal = lazy(() => import("../components/CaseStudyModal"));
 
 export default function Projects() {
   usePageTitle("Projects");
@@ -72,7 +73,11 @@ export default function Projects() {
         </AnimatePresence>
       </motion.div>
 
-      <CaseStudyModal project={selectedProject} onClose={closeModal} />
+      {selectedProject && (
+        <Suspense fallback={null}>
+          <CaseStudyModal project={selectedProject} onClose={closeModal} />
+        </Suspense>
+      )}
     </div>
   );
 }

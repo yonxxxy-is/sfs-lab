@@ -18,6 +18,7 @@ function Preview({ p }) {
         width="800"
         height="450"
         loading="lazy"
+        decoding="async"
         className="aspect-video w-full bg-white object-contain"
       />
     );

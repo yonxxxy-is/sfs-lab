@@ -1,13 +1,15 @@
+import { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import { AnimatePresence, MotionConfig } from "framer-motion";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import PageTransition from "./components/PageTransition";
 import Home from "./pages/Home";
-import About from "./pages/About";
-import Projects from "./pages/Projects";
-import Privacy from "./pages/Privacy";
-import NotFound from "./pages/NotFound";
+
+const About = lazy(() => import("./pages/About"));
+const Projects = lazy(() => import("./pages/Projects"));
+const Privacy = lazy(() => import("./pages/Privacy"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 const page = (el) => <PageTransition>{el}</PageTransition>;
 
@@ -16,13 +18,21 @@ function AnimatedRoutes() {
   return (
     // Scroll to top once the old page has finished leaving, so it never jumps mid-fade.
     <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo(0, 0)}>
-      <Routes location={location} key={location.pathname}>
-        <Route path="/" element={page(<Home />)} />
-        <Route path="/about" element={page(<About />)} />
-        <Route path="/projects" element={page(<Projects />)} />
-        <Route path="/privacy" element={page(<Privacy />)} />
-        <Route path="*" element={page(<NotFound />)} />
-      </Routes>
+      <Suspense
+        fallback={
+          <div role="status" className="py-16 text-center text-sm text-slate-500">
+            Loading page...
+          </div>
+        }
+      >
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={page(<Home />)} />
+          <Route path="/about" element={page(<About />)} />
+          <Route path="/projects" element={page(<Projects />)} />
+          <Route path="/privacy" element={page(<Privacy />)} />
+          <Route path="*" element={page(<NotFound />)} />
+        </Routes>
+      </Suspense>
     </AnimatePresence>
   );
 }

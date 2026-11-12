@@ -112,6 +112,7 @@ export default function About() {
                       width="400"
                       height="300"
                       loading="lazy"
+                      decoding="async"
                       className="aspect-[4/3] w-full rounded-md object-cover"
                     />
                   ))}

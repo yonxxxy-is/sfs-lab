@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { lazy, Suspense, useCallback, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, ArrowUpRight, Download } from "lucide-react";
@@ -6,13 +6,14 @@ import { profile } from "../data/profile";
 import { projects } from "../data/projects";
 import Section from "../components/Section";
 import ProjectCard from "../components/ProjectCard";
-import CaseStudyModal from "../components/CaseStudyModal";
 import CopyEmailButton from "../components/CopyEmailButton";
 import { Reveal, RevealGroup, RevealItem } from "../components/Reveal";
 import { body, button, card, heading, muted, subheading } from "../components/tokens";
 import { iconMap } from "../lib/icons";
 import { fadeUp, staggerHero } from "../lib/motion";
 import usePageTitle from "../hooks/usePageTitle";
+
+const CaseStudyModal = lazy(() => import("../components/CaseStudyModal"));
 
 export default function Home() {
   usePageTitle();
@@ -128,7 +129,11 @@ export default function Home() {
         </div>
       </Reveal>
 
-      <CaseStudyModal project={selectedProject} onClose={closeModal} />
+      {selectedProject && (
+        <Suspense fallback={null}>
+          <CaseStudyModal project={selectedProject} onClose={closeModal} />
+        </Suspense>
+      )}
     </div>
   );
 }
