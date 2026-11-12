@@ -27,7 +27,8 @@ export default function CopyEmailButton({ email, className = "" }) {
     try {
       await navigator.clipboard.writeText(email);
       flash("copied");
-    } catch {
+    } catch (error) {
+      console.error("Failed to copy email to clipboard:", error);
       flash("failed");
     }
   };

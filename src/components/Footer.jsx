@@ -1,4 +1,5 @@
 import { ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
 import { profile } from "../data/profile";
 import Logo from "./Logo";
 import CopyEmailButton from "./CopyEmailButton";
@@ -18,6 +19,9 @@ export default function Footer() {
             Data analytics, IT governance, and business analysis.
           </p>
           <p className={`mt-1 text-xs ${muted}`}>© {new Date().getFullYear()} {profile.name}</p>
+          <Link to="/privacy" className={`mt-1 block text-xs underline ${muted}`}>
+            Privacy Policy
+          </Link>
         </div>
         <div className="flex flex-wrap items-center gap-2">
           <CopyEmailButton email={email} />

@@ -6,6 +6,7 @@ import PageTransition from "./components/PageTransition";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
+import Privacy from "./pages/Privacy";
 import NotFound from "./pages/NotFound";
 
 const page = (el) => <PageTransition>{el}</PageTransition>;
@@ -19,6 +20,7 @@ function AnimatedRoutes() {
         <Route path="/" element={page(<Home />)} />
         <Route path="/about" element={page(<About />)} />
         <Route path="/projects" element={page(<Projects />)} />
+        <Route path="/privacy" element={page(<Privacy />)} />
         <Route path="*" element={page(<NotFound />)} />
       </Routes>
     </AnimatePresence>
