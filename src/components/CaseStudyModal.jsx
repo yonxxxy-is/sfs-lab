@@ -5,6 +5,7 @@ import { ArrowUpRight, CheckCircle2, Info, X } from "lucide-react";
 import Badge from "./Badge";
 import Divider from "./Divider";
 import SipimReceipt from "./SipimReceipt";
+import ProjectBanner from "./ProjectBanner";
 import { body, button, heading, muted, subheading } from "./tokens";
 import { ease, spring } from "../lib/motion";
 
@@ -130,6 +131,9 @@ function Dialog({ project, onClose }) {
           <p className={`text-sm leading-relaxed ${body}`}>{project.overview || project.text}</p>
 
           {project.preview === "receipt" && <SipimReceipt variant="modal" />}
+          {(project.preview === "audit" || project.preview === "jeda") && (
+            <ProjectBanner type={project.preview} variant="modal" />
+          )}
 
           {project.image && (
             <img

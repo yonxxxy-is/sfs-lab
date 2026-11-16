@@ -3,12 +3,14 @@ import { motion } from "framer-motion";
 import { ArrowUpRight, Eye, Github } from "lucide-react";
 import Badge from "./Badge";
 import SipimReceipt from "./SipimReceipt";
+import ProjectBanner from "./ProjectBanner";
 import { button, heading, muted, subheading } from "./tokens";
 import { categoryIcon } from "../lib/icons";
 import { ease, spring } from "../lib/motion";
 
 function Preview({ p }) {
   if (p.preview === "receipt") return <SipimReceipt variant="card" />;
+  if (p.preview === "audit" || p.preview === "jeda") return <ProjectBanner type={p.preview} />;
 
   if (p.image) {
     return (

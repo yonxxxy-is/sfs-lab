@@ -27,6 +27,7 @@ export const projects = [
       "CSV data export and account deletion controls",
     ],
     tags: ["Next.js", "TypeScript", "Supabase", "PostgreSQL", "Tailwind CSS", "Recharts"],
+    preview: "jeda",
     image: null,
     links: [
       { label: "Live demo", url: "https://jeda-ten.vercel.app", type: "demo" },
@@ -90,8 +91,15 @@ export const projects = [
     ],
     note: "Coursework case study. Findings are for academic purposes and are not an official assessment of the company.",
     tags: ["IT Audit", "COBIT 2019", "ISO/IEC 27001", "ISO 31000", "Risk Register", "ISACA ITAF"],
+    preview: "audit",
     image: null,
-    links: [],
+    links: [
+      {
+        label: "GitHub repository",
+        url: "https://github.com/yonxxxy-is/it-audit-alfagift",
+        type: "github",
+      },
+    ],
   },
   {
     id: "energy-transition-dashboard",
