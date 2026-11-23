@@ -3,7 +3,7 @@ export const profile = {
   name: "Sion Felix Saragih",
   headline: "Sion Felix Saragih",
   subheadline:
-    "Information Systems student focused on data analytics, IT governance, and business analysis.",
+    "SFS Lab — portfolio of Sion Felix Saragih, focused on data analytics, IT governance, and business analysis.",
   status: "Open to internships and project collaboration",
   description:
     "I work where data, business processes, and information security meet: building dashboards, documenting workflows, and assessing IT controls against ISO/IEC 27001 and COBIT.",
