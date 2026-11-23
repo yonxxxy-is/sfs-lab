@@ -149,6 +149,11 @@ export const projects = [
     document: "/certificates/cbqa-iso27001.pdf",
     tags: ["ISO/IEC 27001", "CBQA Global"],
     links: [
+      {
+        label: "Certificate details",
+        url: "/certificates/iso27001-foundation.html",
+        type: "details",
+      },
       { label: "Verify certificate", url: "https://validation.cbqaglobal.com/verify/ISMS%20602/25%204418", type: "certificate" },
     ],
   },
@@ -165,6 +170,11 @@ export const projects = [
     document: "/certificates/tableau-certificate.pdf",
     tags: ["Tableau", "Data Visualization"],
     links: [
+      {
+        label: "Certificate details",
+        url: "/certificates/tableau-fundamentals.html",
+        type: "details",
+      },
       { label: "Verify certificate", url: "https://verify.skilljar.com/c/w6nv3am4m6jn", type: "certificate" },
     ],
   },
@@ -206,6 +216,11 @@ export const projects = [
     tags: ["Web Development", "Laravel", "Community Service"],
     links: [
       {
+        label: "Publication details",
+        url: "/publications/gkj-condongcatur-website.html",
+        type: "details",
+      },
+      {
         label: "Read publication",
         url: "https://ojs.uajy.ac.id/index.php/prosidingkonstelasi/article/view/11307",
         type: "publication",
@@ -221,6 +236,11 @@ export const projects = [
       "Program pengabdian kepada masyarakat ini melatih komunitas orang tua SD Kanisius Kadirojo menggunakan Google Gemini, Canva AI, Google Business Profile, dan perangkat video berbasis AI untuk membuat konten promosi usaha.",
     tags: ["Artificial Intelligence", "Digital Literacy", "UMKM"],
     links: [
+      {
+        label: "Publication details",
+        url: "/publications/ai-promotion-umkm.html",
+        type: "details",
+      },
       {
         label: "Read publication",
         url: "https://ojs.uajy.ac.id/index.php/giat/article/view/14411",
@@ -241,6 +261,11 @@ export const projects = [
     document: "/certificates/sap-certificate.pdf",
     tags: ["SAP", "ERP", "SD", "MM", "PP"],
     links: [
+      {
+        label: "Certificate details",
+        url: "/certificates/sap-erp.html",
+        type: "details",
+      },
       {
         label: "Open certificate PDF",
         url: "/certificates/sap-certificate.pdf",

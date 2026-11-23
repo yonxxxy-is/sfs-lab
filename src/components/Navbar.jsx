@@ -67,6 +67,8 @@ export default function Navbar() {
                 )}
               </NavLink>
             ))}
+            <a href="/publications/index.html" className={linkClass({ isActive: false })}>Publications</a>
+            <a href="/certificates/index.html" className={linkClass({ isActive: false })}>Certificates</a>
           </div>
           <div className="border-l border-slate-200 pl-6 dark:border-slate-800">
             <a
@@ -111,6 +113,8 @@ export default function Navbar() {
                   {label}
                 </NavLink>
               ))}
+              <a href="/publications/index.html" className={`${linkClass({ isActive: false })} py-2.5`}>Publications</a>
+              <a href="/certificates/index.html" className={`${linkClass({ isActive: false })} py-2.5`}>Certificates</a>
               <a
                 href={profile.links.linkedin}
                 target="_blank"
