@@ -135,7 +135,15 @@ function Dialog({ project, onClose }) {
             <ProjectBanner type={project.preview} variant="modal" />
           )}
 
-          {project.image && (
+          {project.document && (
+            <iframe
+              src={project.document}
+              title={`${project.title} PDF preview`}
+              className="mt-5 h-[65vh] min-h-96 w-full rounded-lg border border-slate-200 bg-white dark:border-slate-800"
+            />
+          )}
+
+          {project.image && !project.document && (
             <img
               src={project.image}
               alt={project.imageAlt ?? project.title}

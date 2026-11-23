@@ -21,7 +21,8 @@ function Preview({ p }) {
         height="450"
         loading="lazy"
         decoding="async"
-        className="aspect-video w-full bg-white object-contain"
+        className={`aspect-video w-full bg-white ${p.imageFit === "cover" ? "object-cover" : "object-contain"}`}
+        style={{ objectPosition: p.imagePosition ?? "center" }}
       />
     );
   }

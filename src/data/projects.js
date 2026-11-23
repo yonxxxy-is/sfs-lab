@@ -138,30 +138,34 @@ export const projects = [
   },
   {
     id: "iso27001-isms",
-    title: "ISO/IEC 27001 ISMS Risk Assessment and Policy Blueprint",
-    category: "IT Audit & Governance",
-    text: "An information security risk assessment, asset classification, and Statement of Applicability (SoA) for an academic information system.",
-    overview:
-      "A risk governance project that maps threats against ISO/IEC 27001:2022 requirements and defines mitigation strategies and access control policies.",
-    problem:
-      "Academic student data and grading systems face credential stuffing attempts and lack defined disaster recovery targets and formal control baselines.",
-    solution:
-      "Built an asset, threat, and vulnerability matrix, defined risk acceptance criteria, and wrote security control procedures aligned with Annex A.",
-    keyFeatures: [
-      "Threat and vulnerability matrix",
-      "Statement of Applicability (SoA) based on ISO/IEC 27001:2022",
-      "Role-based access control policy",
-      "Incident response and business continuity targets",
-    ],
-    // Removed unverified claims ("high-compliance score", "quantifiable risk reduction").
-    outcomes: [
-      "Produced an ISMS roadmap covering the most critical academic assets",
-      "Documented control decisions in a Statement of Applicability aligned with ISO/IEC 27001:2022",
-    ],
-    tags: ["ISO/IEC 27001", "IT Governance", "Risk Assessment", "Information Security", "Compliance"],
-    image: null,
+    title: "ISO/IEC 27001:2022 Foundation Certificate",
+    category: "Certificate",
+    text: "Foundation-level certificate for ISO/IEC 27001:2022 Information Security Management Systems, issued by CBQA Global.",
+    overview: "CBQA Global lists this ISO/IEC 27001:2022 Foundation certificate as active. Open the PDF preview or verify it online.",
+    image: "/gallery/iso27001-certificate.png",
+    imageAlt: "First page of the CBQA Global ISO/IEC 27001:2022 Foundation certificate validation document.",
+    imageFit: "cover",
+    imagePosition: "top",
+    document: "/certificates/cbqa-iso27001.pdf",
+    tags: ["ISO/IEC 27001", "CBQA Global"],
     links: [
       { label: "Verify certificate", url: "https://validation.cbqaglobal.com/verify/ISMS%20602/25%204418", type: "certificate" },
+    ],
+  },
+  {
+    id: "tableau-certificate",
+    title: "Tableau Fundamentals Certificate",
+    category: "Certificate",
+    text: "Completed Tableau Fundamentals through Tableau eLearning.",
+    overview: "Certificate of completion for Tableau Fundamentals, offered by Tableau eLearning. Open the PDF preview or verify it through Skilljar.",
+    image: "/gallery/tableau-certificate.png",
+    imageAlt: "Tableau Fundamentals certificate of completion.",
+    imageFit: "cover",
+    imagePosition: "center",
+    document: "/certificates/tableau-certificate.pdf",
+    tags: ["Tableau", "Data Visualization"],
+    links: [
+      { label: "Verify certificate", url: "https://verify.skilljar.com/c/w6nv3am4m6jn", type: "certificate" },
     ],
   },
   {
@@ -191,5 +195,57 @@ export const projects = [
     tags: ["BPMN 2.0", "Business Process Modeling", "Gap Analysis", "SOP Development"],
     image: null,
     links: [],
+  },
+  {
+    id: "publication-gkj-condongcatur",
+    title: "Pengembangan Website dalam Meningkatkan Akses Informasi dan Kegiatan Jemaat Gereja Kristen Jawa Condongcatur",
+    category: "Publication",
+    text: "Artikel prosiding tentang pengembangan website responsif dan pelatihan pengelolaan informasi bagi petugas GKJ Condongcatur.",
+    overview:
+      "Publikasi ini membahas pengembangan ulang website GKJ Condongcatur agar informasi dan kegiatan jemaat lebih mudah diakses dan dikelola. Prosesnya mencakup analisis kebutuhan, desain responsif, pengembangan dengan Laravel, dan pelatihan petugas gereja.",
+    tags: ["Web Development", "Laravel", "Community Service"],
+    links: [
+      {
+        label: "Read publication",
+        url: "https://ojs.uajy.ac.id/index.php/prosidingkonstelasi/article/view/11307",
+        type: "publication",
+      },
+    ],
+  },
+  {
+    id: "publication-ai-umkm",
+    title: "Implementasi Teknologi AI dalam Promosi UMKM: Program Pemberdayaan Komunitas Orang Tua SD Kanisius Kadirojo",
+    category: "Publication",
+    text: "Artikel GIAT tentang pelatihan pemanfaatan AI dan perangkat digital untuk membantu UMKM membuat konten promosi.",
+    overview:
+      "Program pengabdian kepada masyarakat ini melatih komunitas orang tua SD Kanisius Kadirojo menggunakan Google Gemini, Canva AI, Google Business Profile, dan perangkat video berbasis AI untuk membuat konten promosi usaha.",
+    tags: ["Artificial Intelligence", "Digital Literacy", "UMKM"],
+    links: [
+      {
+        label: "Read publication",
+        url: "https://ojs.uajy.ac.id/index.php/giat/article/view/14411",
+        type: "publication",
+      },
+    ],
+  },
+  {
+    id: "sap-certificate",
+    title: "SAP Enterprise Resource Planning (SD, MM, PP)",
+    category: "Certificate",
+    text: "Certificate of participation in the Enterprise Resource Planning program covering SAP modules SD, MM, and PP.",
+    overview: "The certificate records participation in the Enterprise Resource Planning program from April to June 2026, conducted by the Faculty of Industrial Technology at Universitas Atma Jaya Yogyakarta.",
+    image: "/gallery/sap-certificate.png",
+    imageAlt: "SAP Enterprise Resource Planning certificate showing the modules SD, MM, and PP.",
+    imageFit: "cover",
+    imagePosition: "top",
+    document: "/certificates/sap-certificate.pdf",
+    tags: ["SAP", "ERP", "SD", "MM", "PP"],
+    links: [
+      {
+        label: "Open certificate PDF",
+        url: "/certificates/sap-certificate.pdf",
+        type: "certificate",
+      },
+    ],
   },
 ];

@@ -1,4 +1,4 @@
-import { BarChart3, Code, ShieldCheck, Workflow } from "lucide-react";
+import { Award, BarChart3, BookOpen, Code, ShieldCheck, Workflow } from "lucide-react";
 
 // Icons referenced by name in data files.
 export const iconMap = { BarChart3, Code, ShieldCheck, Workflow };
@@ -9,4 +9,6 @@ export const categoryIcon = {
   "Systems Development": Code,
   "IT Audit & Governance": ShieldCheck,
   "Business Analysis": Workflow,
+  Publication: BookOpen,
+  Certificate: Award,
 };
